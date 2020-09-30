@@ -17,8 +17,10 @@ const app = express();
 // Lectura y parseo del Body (Petición http) para revisar al usuario antes del socket
 app.use(express.json());
 
-// Mis Rutas
+// Mis Rutas (Anexar aqui todas las rutas a las que apuntara la app)
 app.use('/api/login', require('./routes/auth'));
+app.use('/api/usuarios', require('./routes/usuarios'));
+app.use('/api/mensajes', require('./routes/mensajes'));
 
 
 // Node Server
